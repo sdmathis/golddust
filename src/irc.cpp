@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 Aliencoin Developers
+// Copyright (c) 2013 Golddust Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -295,14 +295,14 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #aliencoininvasionTEST3\r");
-            Send(hSocket, "WHO #aliencoininvasionTEST3\r");
+            Send(hSocket, "JOIN #golddustinvasionTEST3\r");
+            Send(hSocket, "WHO #golddustinvasionTEST3\r");
         } else {
-            // randomly join #aliencoin00-#aliencoin99
+            // randomly join #golddust00-#golddust99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // Aliencoin: for now, just use one channel
-            Send(hSocket, strprintf("JOIN #aliencoininvasion%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #aliencoininvasion%02d\r", channel_number).c_str());
+            channel_number = 0; // Golddust: for now, just use one channel
+            Send(hSocket, strprintf("JOIN #golddustinvasion%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #golddustinvasion%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

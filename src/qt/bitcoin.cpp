@@ -109,7 +109,7 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occured. Aliencoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occured. Golddust can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
@@ -121,7 +121,7 @@ int main(int argc, char *argv[])
     // Do this early as we don't want to bother initializing if we are just calling IPC
     for (int i = 1; i < argc; i++)
     {
-        if (boost::algorithm::istarts_with(argv[i], "aliencoin:"))
+        if (boost::algorithm::istarts_with(argv[i], "golddust:"))
         {
             const char *strURI = argv[i];
             try {
@@ -169,12 +169,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("Aliencoin");
-    app.setOrganizationDomain("aliencoin-noexist-domain.org");
+    app.setOrganizationName("Golddust");
+    app.setOrganizationDomain("golddust-noexist-domain.org");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        app.setApplicationName("Aliencoin-Qt-testnet");
+        app.setApplicationName("Golddust-Qt-testnet");
     else
-        app.setApplicationName("Aliencoin-Qt");
+        app.setApplicationName("Golddust-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -278,7 +278,7 @@ int main(int argc, char *argv[])
                 // Check for URI in argv
                 for (int i = 1; i < argc; i++)
                 {
-                    if (boost::algorithm::istarts_with(argv[i], "aliencoin:"))
+                    if (boost::algorithm::istarts_with(argv[i], "golddust:"))
                     {
                         const char *strURI = argv[i];
                         try {

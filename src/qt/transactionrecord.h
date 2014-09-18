@@ -72,7 +72,7 @@ public:
     };
 
     /** Number of confirmation needed for transaction */
-    static const int NumConfirmations = 2;			// 4 confirmation for ALN
+    static const int NumConfirmations = 2;			// 4 confirmation for GDT
 
     TransactionRecord():
             hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)

@@ -1,4 +1,4 @@
-Aliencoin - a fork of Litecoin version with fast block time and faster confirmations (2 confirmations needed instead of 6). Like Litecoin it uses scrypt as a proof of work scheme.
+Golddust - a fork of Litecoin version with fast block time and faster confirmations (2 confirmations needed instead of 6). Like Litecoin it uses scrypt as a proof of work scheme.
 
 	- 30 second block target
 	- Difficulty retargets every 1 hour
@@ -21,7 +21,7 @@ or are controversial.
 
 The master branch is regularly built and tested, but is not guaranteed
 to be completely stable. Tags are regularly created to indicate new
-official, stable release versions of Aliencoin.
+official, stable release versions of Golddust.
 
 Feature branches are created when there are major new features being
 worked on by several people.
