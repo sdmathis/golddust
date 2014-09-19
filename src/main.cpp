@@ -33,7 +33,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 
-uint256 hashGenesisBlock("0x1d7952d0fcee8c486d68511c319fd4db39b69907ce0f587f5c8655d284e78018");
+uint256 hashGenesisBlock("0x51352b4940a9cdd1c3d4b0384081ef75c05d02f50bd8f05b9cf380ada74f65e3");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Golddust: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2077,7 +2077,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1411101313;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 315742;
+        block.nNonce   = 359902;
 
         if (fTestNet)
         {
@@ -2092,7 +2092,7 @@ bool LoadBlockIndex(bool fAllowNew)
         assert(block.hashMerkleRoot == uint256("0xf2b79395780546d9cc0f7a6ad9516130b0480e6df4bbd882fe8924d8d050ccd5"));
 
         // If genesis block hash does not match, then generate new genesis hash.
-        if (true && block.GetHash() != hashGenesisBlock)
+        if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
