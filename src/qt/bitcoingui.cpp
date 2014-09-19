@@ -72,6 +72,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
     resize(850, 550);
     setWindowTitle(tr("Golddust") + " - " + tr("Wallet"));
+    setWindowFlags(Qt::FramelessWindowHint);
 #ifndef Q_WS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));

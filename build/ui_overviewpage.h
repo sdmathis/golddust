@@ -60,7 +60,7 @@ public:
     {
         if (OverviewPage->objectName().isEmpty())
             OverviewPage->setObjectName(QString::fromUtf8("OverviewPage"));
-        OverviewPage->resize(573, 342);
+        OverviewPage->resize(573, 415);
         horizontalLayout = new QHBoxLayout(OverviewPage);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout_2 = new QVBoxLayout();
@@ -115,7 +115,7 @@ public:
         font1.setWeight(75);
         labelBalance->setFont(font1);
         labelBalance->setCursor(QCursor(Qt::IBeamCursor));
-        labelBalance->setText(QString::fromUtf8("0 ALN"));
+        labelBalance->setText(QString::fromUtf8("0 GDT"));
         labelBalance->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(0, QFormLayout::FieldRole, labelBalance);
@@ -129,7 +129,7 @@ public:
         labelUnconfirmed->setObjectName(QString::fromUtf8("labelUnconfirmed"));
         labelUnconfirmed->setFont(font1);
         labelUnconfirmed->setCursor(QCursor(Qt::IBeamCursor));
-        labelUnconfirmed->setText(QString::fromUtf8("0 ALN"));
+        labelUnconfirmed->setText(QString::fromUtf8("0 GDT"));
         labelUnconfirmed->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(1, QFormLayout::FieldRole, labelUnconfirmed);
@@ -153,7 +153,7 @@ public:
         labelImmature = new QLabel(frame);
         labelImmature->setObjectName(QString::fromUtf8("labelImmature"));
         labelImmature->setFont(font1);
-        labelImmature->setText(QString::fromUtf8("0 ALN"));
+        labelImmature->setText(QString::fromUtf8("0 GDT"));
         labelImmature->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(2, QFormLayout::FieldRole, labelImmature);
@@ -234,7 +234,7 @@ public:
         OverviewPage->setWindowTitle(QApplication::translate("OverviewPage", "Form", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("OverviewPage", "Wallet", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        labelWalletStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Aliencoin network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
+        labelWalletStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Golddust network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         label->setText(QApplication::translate("OverviewPage", "Balance:", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
@@ -254,7 +254,7 @@ public:
 #endif // QT_NO_TOOLTIP
         label_4->setText(QApplication::translate("OverviewPage", "<b>Recent transactions</b>", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Aliencoin network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
+        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Golddust network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
     } // retranslateUi
 

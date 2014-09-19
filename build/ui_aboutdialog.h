@@ -28,6 +28,7 @@ class Ui_AboutDialog
 public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_4;
+    QLabel *label_3;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout;
@@ -43,6 +44,8 @@ public:
         if (AboutDialog->objectName().isEmpty())
             AboutDialog->setObjectName(QString::fromUtf8("AboutDialog"));
         AboutDialog->resize(593, 331);
+        AboutDialog->setStyleSheet(QString::fromUtf8("background-color: gold;\n"
+""));
         horizontalLayout_2 = new QHBoxLayout(AboutDialog);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_4 = new QLabel(AboutDialog);
@@ -52,9 +55,15 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy);
-        label_4->setPixmap(QPixmap(QString::fromUtf8(":/images/about")));
+        label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(130, 99, 255);"));
+        label_4->setPixmap(QPixmap(QString::fromUtf8("../../../../Users/sdmathis/Pictures/Coin images/logo2.png")));
 
         horizontalLayout_2->addWidget(label_4);
+
+        label_3 = new QLabel(AboutDialog);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_2->addWidget(label_3);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -89,6 +98,7 @@ public:
 
         label_2 = new QLabel(AboutDialog);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setMinimumSize(QSize(471, 0));
         label_2->setCursor(QCursor(Qt::IBeamCursor));
         label_2->setWordWrap(true);
         label_2->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -119,20 +129,25 @@ public:
 
     void retranslateUi(QDialog *AboutDialog)
     {
-        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "About Aliencoin", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("AboutDialog", "<b>Aliencoin</b> version", 0, QApplication::UnicodeUTF8));
+        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "About Golddust", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QString());
+        label->setText(QApplication::translate("AboutDialog", "<b>Golddust</b> version", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("AboutDialog", "\n"
 "          Copyright \302\251 2009-2012 Bitcoin Developers\n"
-"          Copyright \302\251 2011-2012 Litecoin Developers\n"
-"          Copyright \302\251 2013 Aliencoin Developers\n"
+"          Copyright \302\251 2011-2013 Litecoin Developers\n"
+"          Copyright \302\251 2014 Golddust Developers\n"
 "\n"
 "          This is experimental software.\n"
 "\n"
-"          Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.\n"
+"          Distributed under the MIT/X11 software license, see the accompanying\n"
+"          file COPYING or http://www.opensource.org/licenses/mit-license.php.\n"
 "\n"
-"          This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.\n"
+"          This product includes software developed by the OpenSSL Project for \n"
+"          use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic\n"
+"          software written by Eric Young (eay@cryptsoft.com) and UPnP software\n"
+"          written by Thomas Bernard.\n"
 "\n"
-"          Offical forum: not exist\n"
+"          \n"
 "        ", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
