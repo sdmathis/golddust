@@ -834,18 +834,33 @@ static const int64 nDiffChangeTarget = 600000;
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 40 * COIN;
-	if (nHeight < 1000)
-	{
-		nSubsidy = 0.0001 * COIN;
-		}
-	if (nHeight < 2)
-	{
-		nSubsidy = 2000000 * COIN;
-		}
+    int64 nSubsidy = 10000 * COIN;
 
-    // Subsidy is cut in half every 1051200 blocks, which will occur approximately every 1 year
-    nSubsidy >>= (nHeight / 1051200); // Golddust: 1.0512mil blocks in ~1 year
+    if (nHeight < 1000000)
+	{
+        nSubsidy = 25000 * COIN;
+		}
+    if (nHeight < 1000000)
+    {
+        nSubsidy = 250000 * COIN;
+        }
+    if (nHeight < 250000)
+    {
+        nSubsidy = 50000 * COIN;
+        }
+    if (nHeight < 100000)
+    {
+        nSubsidy = 100000 * COIN;
+        }
+    if (nHeight < 2)
+    {
+        nSubsidy = 500000000 * COIN;
+        }
+    if (nHeight > 2325000)
+    {
+        nSubsidy = 0 * COIN;
+        }
+
 
     return nSubsidy + nFees;
 }
@@ -854,7 +869,7 @@ static const int64 nTargetTimespan = 60 * 60;	// Golddust: 1 hour
 static const int64 nTargetSpacing = 30;						// Golddust: 30 sec
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 static const int64 nTargetTimespanRe = 60 * 60; // 60 Minutes
-static const int64 nTargetSpacingRe = 30; // Golddust: 30 seconds
+static const int64 nTargetSpacingRe = 300; // Golddust: 5 minutes
 static const int64 nIntervalRe = nTargetTimespanRe / nTargetSpacingRe;
 
 //
@@ -2048,7 +2063,7 @@ bool LoadBlockIndex(bool fAllowNew)
 		//   vMerkleTree: 4fe8c1ba0a
 
         // Genesis block
-        const char* pszTimestamp = "Use of police in N.J. bridge scandal could be illegal";
+        const char* pszTimestamp = "Larry Ellison is stepping down as Oracle's chief executive";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2060,13 +2075,13 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1389543529;
+        block.nTime    = 1411091344;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 315742;
 
         if (fTestNet)
         {
-            block.nTime    = 1389519356;
+            block.nTime    = 1411091344;
             block.nNonce   = 1292958;
         }
 
