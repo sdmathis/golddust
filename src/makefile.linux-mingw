@@ -9,14 +9,14 @@ USE_UPNP:=0
 INCLUDEPATHS= \
  -I"$(DEPSDIR)/boost_1_53_0" \
  -I"$(DEPSDIR)/db-4.8.30.NC/build_unix" \
- -I"$(DEPSDIR)/openssl-1.0.1e/include" \
+ -I"$(DEPSDIR)/openssl-1.0.1g/include" \
  -I"$(DEPSDIR)" \
  -I"$(CURDIR)"/obj \
 
 LIBPATHS= \
  -L"$(DEPSDIR)/boost_1_53_0/stage/lib" \
  -L"$(DEPSDIR)/db-4.8.30.NC/build_unix" \
- -L"$(DEPSDIR)/openssl-1.0.1e"
+ -L"$(DEPSDIR)/openssl-1.0.1g"
 
 LIBS= \
  -l boost_system-mt-s \
@@ -70,7 +70,7 @@ OBJS= \
     obj/walletdb.o \
     obj/noui.o
 
-all: aliencoind.exe
+all: golddustd.exe
 
 obj/scrypt.o: scrypt.c
 	i586-mingw32msvc-gcc -c $(CFLAGS) -o $@ $^
@@ -83,7 +83,7 @@ DEFS += -DHAVE_BUILD_INFO
 obj/%.o: %.cpp $(HEADERS)
 	i586-mingw32msvc-g++ -c $(CFLAGS) -o $@ $<
 
-aliencoind.exe: $(OBJS:obj/%=obj/%)
+golddustd.exe: $(OBJS:obj/%=obj/%)
 	i586-mingw32msvc-g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -91,15 +91,15 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	i586-mingw32msvc-g++ -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_aliencoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_golddust.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	i586-mingw32msvc-g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 
 clean:
 	-rm -f obj/*.o
-	-rm -f aliencoind.exe
+	-rm -f golddustd.exe
 	-rm -f obj-test/*.o
-	-rm -f test_aliencoin.exe
+	-rm -f test_golddust.exe
 	-rm -f src/build.h
 
 FORCE:

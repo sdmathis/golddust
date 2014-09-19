@@ -7,12 +7,12 @@ USE_UPNP:=0
 INCLUDEPATHS= \
  -I"C:\MinGW-devel\boost_1_53_0" \
  -I"C:\MinGW-devel\db-4.8.30.NC\build_unix" \
- -I"C:\MinGW-devel\openssl-1.0.1e\include"
+ -I"C:\MinGW-devel\openssl-1.0.1g\include"
 
 LIBPATHS= \
  -L"C:\MinGW-devel\boost_1_53_0\stage\lib" \
  -L"C:\MinGW-devel\db-4.8.30.NC\build_unix" \
- -L"C:\MinGW-devel\openssl-1.0.1e"
+ -L"C:\MinGW-devel\openssl-1.0.1g"
 
 LIBS= \
  -l boost_system-mgw47-mt-s-1_53 \
@@ -68,7 +68,7 @@ OBJS= \
     obj/noui.o
 
 
-all: aliencoind.exe
+all: golddustd.exe
 
 obj/scrypt.o: scrypt.c
 	gcc -c $(CFLAGS) -o $@ $^
@@ -76,7 +76,7 @@ obj/scrypt.o: scrypt.c
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-aliencoind.exe: $(OBJS:obj/%=obj/%)
+golddustd.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -84,11 +84,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	g++ -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_aliencoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_golddust.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q aliencoind test_aliencoin
+	-del /Q golddustd test_golddust
 	-del /Q obj\*
 	-del /Q obj-test\*
 	-del /Q build.h
