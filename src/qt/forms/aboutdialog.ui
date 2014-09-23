@@ -30,7 +30,7 @@
       <string notr="true">background-color: rgb(130, 99, 255);</string>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../Users/sdmathis/Documents/GitHub/golddust/src/qt/res/icons/logo3.png</pixmap>
+      <pixmap>../res/icons/logo3.png</pixmap>
      </property>
     </widget>
    </item>
