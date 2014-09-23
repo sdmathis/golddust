@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>QR Code Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 215, 0);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="lblQRCode">
@@ -27,6 +30,9 @@
        <width>300</width>
        <height>300</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
@@ -69,6 +75,9 @@
         <property name="enabled">
          <bool>true</bool>
         </property>
+        <property name="styleSheet">
+         <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
         <property name="text">
          <string>Request Payment</string>
         </property>
@@ -81,6 +90,9 @@
         </property>
         <item row="1" column="0">
          <widget class="QLabel" name="lblLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
           <property name="text">
            <string>Label:</string>
           </property>
@@ -100,6 +112,9 @@
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lblMessage">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
           <property name="text">
            <string>Message:</string>
           </property>
@@ -124,6 +139,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
            <string>Amount:</string>
@@ -171,6 +189,17 @@
         </item>
         <item>
          <widget class="QPushButton" name="btnSaveAs">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 215, 0);
+background-image: url(:/icons/background1);</string>
+          </property>
           <property name="text">
            <string>&amp;Save As...</string>
           </property>

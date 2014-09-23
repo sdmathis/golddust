@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Send Coins</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 215, 0);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QScrollArea" name="scrollArea">
@@ -25,11 +28,20 @@
         <x>0</x>
         <y>0</y>
         <width>666</width>
-        <height>165</height>
+        <height>163</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -60,15 +72,26 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="addButton">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Send to multiple recipients at once</string>
        </property>
-       <property name="text">
-        <string>&amp;Add Recipient</string>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 215, 0);
+background-image: url(:/icons/background1);
+</string>
+       </property>
+       <property name="text">
+        <string>Add Recipient</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -83,15 +106,22 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Remove all transaction fields</string>
        </property>
-       <property name="text">
-        <string>Clear &amp;All</string>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255,215,0);
+background-image: url(:/icons/background1);</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+       <property name="text">
+        <string>Clear</string>
        </property>
        <property name="autoRepeatDelay">
         <number>300</number>
@@ -108,6 +138,10 @@
        </property>
        <item>
         <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+selection-color: rgb(0, 0, 0);</string>
+         </property>
          <property name="text">
           <string>Balance:</string>
          </property>
@@ -117,6 +151,9 @@
         <widget class="QLabel" name="labelBalance">
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>123.456 GDT</string>
@@ -145,19 +182,20 @@
       <widget class="QPushButton" name="sendButton">
        <property name="minimumSize">
         <size>
-         <width>150</width>
+         <width>175</width>
          <height>0</height>
         </size>
        </property>
        <property name="toolTip">
         <string>Confirm the send action</string>
        </property>
-       <property name="text">
-        <string>&amp;Send</string>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 215, 0);
+background-image: url(:/icons/background1);</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
+       <property name="text">
+        <string>Send</string>
        </property>
        <property name="default">
         <bool>true</bool>
@@ -168,8 +206,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../bitcoin.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Address Book</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 215, 0);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="labelExplanation">
@@ -59,82 +62,124 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="newAddressButton">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Create a new address</string>
        </property>
-       <property name="text">
-        <string>&amp;New Address</string>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(225, 215, 0);</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
+       <property name="text">
+        <string>New</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="copyToClipboard">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Copy the currently selected address to the system clipboard</string>
        </property>
-       <property name="text">
-        <string>&amp;Copy Address</string>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/editcopy</normaloff>:/icons/editcopy</iconset>
+       <property name="text">
+        <string>Copy</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="showQRCode">
-       <property name="text">
-        <string>Show &amp;QR Code</string>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/qrcode</normaloff>:/icons/qrcode</iconset>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
+       </property>
+       <property name="text">
+        <string>QR Code</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="signMessage">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Sign a message to prove you own a Bitcoin address</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
+       </property>
        <property name="text">
         <string>&amp;Sign Message</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="verifyMessage">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Verify a message to ensure it was signed with a specified Bitcoin address</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
+       </property>
        <property name="text">
         <string>&amp;Verify Message</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/transaction_0</normaloff>:/icons/transaction_0</iconset>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="deleteButton">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Delete the currently selected address from the list. Only sending addresses can be deleted.</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
+       </property>
        <property name="text">
         <string>&amp;Delete</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
       </widget>
      </item>
@@ -159,6 +204,17 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-image: url(:/icons/background1);
+color: rgb(255, 215, 0);</string>
+       </property>
        <property name="standardButtons">
         <set>QDialogButtonBox::Ok</set>
        </property>
@@ -168,8 +224,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../bitcoin.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
