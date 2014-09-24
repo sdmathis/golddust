@@ -70,7 +70,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     notificator(0),
     rpcConsole(0)
 {
-    resize(850, 550);
+    resize(750, 550);
     setWindowTitle(tr("Golddust") + " - " + tr("Wallet"));
     qApp->setStyleSheet("QMainWindow { background:rgb(255, 215, 0); color:#ffd700; font-family:'Bebas Neue'; } #toolbar2 { border:none;width:28px; background:rgb(160, 32, 240); }");
     //setWindowFlags(Qt::FramelessWindowHint);
